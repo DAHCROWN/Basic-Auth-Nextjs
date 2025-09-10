@@ -36,6 +36,8 @@ export async function login(formData: FormData) {
 export async function logout() {
 	// Destroy the session
 	cookies().set("session", "", { expires: new Date(0) });
+  //* Alternative logout type
+  cookies().delete("session")
 }
 
 export async function getSession() {
